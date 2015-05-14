@@ -5,7 +5,7 @@
   "main": "main.js",
   "browser": "chrome.js",
   "scripts": {
-    "test": "standard && tape test/*.js"
+    "test": "standard && browserify test/chrome-app/index.js -o test/chrome-app/bundle.js && tape test/*.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/No9/chrome-os/issues"
   },
-  "homepage": "https://github.com/No9/chrome-os"
+  "homepage": "https://github.com/No9/chrome-os",
+  "devDependencies": {
+    "tape": "^4.0.0"
+  }
 }

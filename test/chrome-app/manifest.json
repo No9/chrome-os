@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+
+  "name": "chrome-os-test",
+  "description": "A test harness for os module in chrome using browserify.",
+  "version": "1.0.0",
+
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  }
+}
