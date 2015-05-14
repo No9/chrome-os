@@ -8,16 +8,25 @@ This library can be used directly with your browserify builds with targeting Chr
 
 ```
 $ npm install chrome-os --save
-$ browserify -r chrome-os:os index.js -o test/chrome-app/bundle.js
+$ browserify -r chrome-os:os index.js -o bundle.js
 ```
 
 ## Test 
-
-Build the solution 
 
 ```
 $ npm test
 ```
 
-Then load the folder `test/chrome-app` as an unpacked extension in chrome.
-Open the app and the tests will be run with results shown in the console.
+This will load the folder `test/chrome-app` as an unpacked extension in chrome.
+Test currently designed for windows and Mac Canary support for others accepted
+
+## Permissions 
+
+The following permissions need to be added to your chrome packaged app for this module.
+
+```
+  "permissions": [
+  	"system.memory",
+  	"system.cpu"
+  ]
+```

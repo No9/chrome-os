@@ -9,5 +9,9 @@
     "background": {
       "scripts": ["background.js"]
     }
-  }
+  },
+  "permissions": [
+    "system.memory",
+    "system.cpu"
+  ]
 }
