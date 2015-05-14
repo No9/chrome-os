@@ -8,12 +8,6 @@ var platformMap = {
         'notsupported': 'Not Supported'
 }
 
-chrome.runtime.onStartup.addListener(function () { // eslint-disable-line
-  chrome.system.cpu.getInfo(function (info) { // eslint-disable-line
-    console.log(info)
-  })
-})
-
 exports.endianness = function () { return 'LE' }
 
 exports.hostname = function () {
@@ -57,7 +51,7 @@ exports.networkInterfaces
 = exports.getNetworkInterfaces
 = function () { return {} }
 
-exports.arch = function () { return 'javascript' }
+exports.arch = function () { return 'Not Supported' }
 
 exports.platform = function (cb) {
   if (typeof cb !== 'function') {
@@ -65,7 +59,6 @@ exports.platform = function (cb) {
     return platformMap['notsupported']
   }
   chrome.runtime.getPlatformInfo(function (info) { // eslint-disable-line
-    console.log(info.os)
     cb(platformMap[info.os])
   })
 }
