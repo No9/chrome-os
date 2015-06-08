@@ -22,4 +22,5 @@ switch (os.platform()) {
 var app = path.join(__dirname, '..', 'test/chrome-app')
 var command = CHROME + ' --load-and-launch-app=' + app
 var env = { cwd: path.join(__dirname, '..') }
+console.log(command)
 cp.exec(command, env, function () {})
